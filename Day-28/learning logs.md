@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-28/3.png">
 </p> 
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-28/2.png">
 </p> 
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-28/1.png">
 </p> 
 
 
