@@ -45,3 +45,15 @@ verbose:控制决策树建立过程的冗余度（重复的部分或者特征）
 warm_start:如果设置为True，在之前的模型基础上预测并添加模型，否则，建立一个全新的森林,默认为False  
 class_weight:“balanced” 模式自动调整权重
 ```
+## RandomForestClassifier属性说明  
+```
+使用方法：RandomForestClassifier.属性
+estimators_ : 森林中的树；
+classes_ :类标签；
+n_classes_ : 类的数目；
+n_features_ : 特征数目；
+n_outputs_ : 输出数；
+feature_importances_ :输出每个特征重要性，和为1；
+oob_score_ : 使用袋外样本估计的准确率；
+oob_decision_function_ : 决策函数
+```
