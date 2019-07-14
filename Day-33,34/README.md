@@ -72,3 +72,9 @@ plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 ```
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-33%2C34/Figure_1.png">
+</p> 
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-33%2C34/Figure_2.png">
+</p> 
