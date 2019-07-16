@@ -85,3 +85,16 @@ plt.ylabel('hit rate')
 plt.show()
 
 ```
+原始数据分布散点图：
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-43%2C44/pictures/8.png">
+</p> 
+选择最优的分类个数:  
+从图中可以看出，6个簇开始，误差下降的开始缓慢。所以我们可以选择6个簇。
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-43%2C44/pictures/9.png">
+</p> 
+K-均值分类结果。五角星表示每个簇的形心：
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-43%2C44/pictures/10.png">
+</p> 
