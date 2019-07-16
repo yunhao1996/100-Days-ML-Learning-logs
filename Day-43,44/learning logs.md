@@ -62,3 +62,6 @@ K均值聚类 一个迭代的方法，它要做两件事，一件是簇分配，
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-43%2C44/pictures/6.jpg">
 </p> 
 
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-43%2C44/pictures/7.jpg">
+</p> 
