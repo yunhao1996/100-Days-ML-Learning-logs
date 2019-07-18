@@ -130,4 +130,17 @@ import numpy as np
 x = np.array([3-4j, 2+0j, 0+1j])
 x = np.abs(x)  # 取模或者说绝对值
 ```
-10.
+10.数组元素求和、累加、累乘
+```python
+import numpy as np
+
+x = np.arange(1, 6)
+x = np.add.reduce(x)  # 返回数组所有元素和
+x = np.add.accumulate(x)  # 数组累加
+x = np.multiply.accumulate(x)  # 数组累乘
+```
+11.外积
+```python
+x = np.arange(1, 6)
+b = np.outer(x, x)  # 第一个参数表示倍数，使得第二个向量每次变为几倍
+```
