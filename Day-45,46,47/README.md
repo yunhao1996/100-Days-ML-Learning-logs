@@ -88,8 +88,46 @@ h = np.random.randint(0, 10, (3, 3))  # 随机生成[0, 10）之间的整数
 i = np.eye(3)   # 返回一个二维数组，3×3，对角线的地方为1，其他为0.默认0为主对角线
 j = np.empty(3)  # 创建以为空数组
 ```
+5.NumPy Array Attributes
+```python
+import numpy as np
 
+x1 = np.random.randint(10, size=6)  # 一维数组
+x2 = np.random.randint(10, size=(3, 4))  # 二维数组
+x3 = np.random.randint(10, size=(3, 4, 5))  # 三维数组
 
+print(x3.ndim)  # 输出数组维度
+print(x3.shape)
+print(x3.size)
+print(x3.dtype)
+print(x3.itemsize)  # 每个数组元素的大小（字节）
+print(x3.nbytes)  # 数字的总大小
+```
+6.访问数组操作
+```python
+x = [1, 8, 9, 10, 5, 4, 3, 7]
+a = x[::-1]  # 列表倒序
+b = x[1::2]  # 从列表第一个元素开始，隔一个取一个
+c = x[2:5]  # 元素地址取值范围，前闭后开
+```
+7.拼接矩阵
+```pyth
+mport numpy as np
+x = np.array([[1, 2, 3]])
+y = np.array([[3, 2, 1]])
+z = np.concatenate([x, y], axis=0)  # 拼接两个矩阵,axis为0，按行拼接，为1，按列拼接
+```
+8. 数组split
+```python
+import numpy as np
+x = [1, 2, 3, 99, 99, 3, 2, 1, 0]
+x1, x2, x3 = np.split(x, [3, 5])  # 3表示第1，2段划分位置，5表示第2，3段划分位置。前开后闭
+```
+9.绝对值
+```python
+import numpy as np
 
-
-
+x = np.array([3-4j, 2+0j, 0+1j])
+x = np.abs(x)  # 取模或者说绝对值
+```
+10.
