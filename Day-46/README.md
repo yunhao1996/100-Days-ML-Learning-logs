@@ -49,7 +49,8 @@ plt.show()
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/1.png">
 </p>
-3.数组相加
+
+3.数组相加  
 ```python
 输入：
 import numpy as np
@@ -87,7 +88,8 @@ plt.show()
 显示：
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/2.png">
-</p>
+</p>  
+
 5.比较、掩码和布尔逻辑
 5.1 计算雨天
 ```python
@@ -108,6 +110,7 @@ plt.show()
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/3.png">
 </p>
+
 5.2 条件判断，输出布尔型
 ```python
 输入：
