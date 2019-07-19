@@ -88,3 +88,64 @@ plt.show()
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/2.png">
 </p>
+5.比较、掩码和布尔逻辑
+5.1 计算雨天
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn
+
+#使用panda提取降雨量英寸作为一个数字数组
+rainfall = pd.read_csv('D:\\ML_100\\46\\data46.csv')['PRCP'].values
+inches = rainfall / 254.0  # 换算单位
+print(inches.shape)
+seaborn.set()  # 设置网格风格
+plt.hist(inches, 40)  # 画直方图，参数40设置柱状图的粗细
+plt.show()
+```
+显示：
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/3.png">
+</p>
+5.2 条件判断，输出布尔型
+```python
+输入：
+import numpy as np
+
+x = np.array([1, 2, 3, 4, 5])
+print(x < 3)
+print((2 * x) == (x ** 2))
+输出：
+[ True  True False False False]
+[False  True False False False]
+```
+5.3 处理布尔型数据
+```python
+import numpy as np
+
+x = np.random.randint(10, size=(3, 4))
+print(x)
+a = np.count_nonzero(x < 6)  # 判断有多少数小于6
+print(a)
+输出：
+[[8 4 2 1]
+ [9 4 1 8]
+ [9 9 6 6]]
+5
+```
+5.4 布尔型运算
+```python
+import numpy as np
+
+print(bool(0))  # 将参数转为布尔型，没有参数返回False
+print(bool(74))
+print(bin(42 & 59))  # 按位与
+输出：
+False
+True
+0b101010
+```
+
+
+
