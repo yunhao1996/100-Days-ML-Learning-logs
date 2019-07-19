@@ -49,3 +49,42 @@ plt.show()
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/1.png">
 </p>
+3.数组相加
+```python
+输入：
+import numpy as np
+
+a = np.array([0, 1, 2])
+b = np.array([5, 5, 5])
+M = np.ones((3, 3))
+
+print('a+b：', a + b)
+print('a+5：', a+5)
+print('M+a：', M+a)
+输出：
+a+b: [5 6 7]
+a+5： [5 6 7]
+M+a: [[1. 2. 3.]
+ [1. 2. 3.]
+ [1. 2. 3.]]
+```
+4.画二维函数
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 5, 50)  # 0-5之间线性划分50个数
+y = np.linspace(0, 5, 50)[:, np.newaxis]  # 列扩维
+z = np.sin(x) ** 10 + np.cos(10 + y * x) * np.cos(x)  # 二维函数
+# print(z)
+
+# 图示z，extent：限制坐标范围
+plt.imshow(z, origin='lower', extent=[0, 5, 0, 5],
+           cmap='binary')
+plt.colorbar()  # 图配渐变色
+plt.show()
+```
+显示：
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/2.png">
+</p>
