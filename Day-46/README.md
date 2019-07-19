@@ -46,3 +46,6 @@ plt.ylabel('number');
 plt.show()
 ```
 结果:
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-46/1.png">
+</p>
