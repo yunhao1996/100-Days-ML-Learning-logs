@@ -77,10 +77,13 @@ plt.show()
 ```
 显示：  
 原始数据图：  
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-47/1.png">
 </p>
-挑选数据图;
+
+挑选数据图：
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-47/2.png">
 </p>
@@ -111,9 +114,11 @@ plt.plot(bins, counts, linestyle='steps')
 plt.show()
 ```
 显示：
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-47/3.png">
 </p>
+
 2.1快速排序数组
 ```python
 输入：
