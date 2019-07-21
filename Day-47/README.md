@@ -78,11 +78,11 @@ plt.show()
 显示：  
 原始数据图：  
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-47/1.png">
 </p>
 挑选数据图;
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-47/2.png">
 </p>
 
 1.4 例子：装箱数据
@@ -112,7 +112,7 @@ plt.show()
 ```
 显示：
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-47/3.png">
 </p>
 2.1快速排序数组
 ```python
