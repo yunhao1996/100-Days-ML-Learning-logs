@@ -302,19 +302,179 @@ Texas       2000    20851820
             2010    25145561
 dtype: int64
 ```
-5.2
+5.2 创建多索引的方法
 ```python
+输入:
+import numpy as np
+import pandas as pd
+
+df = pd.DataFrame(np.random.rand(4, 2),
+                  index=[['a', 'a', 'b', 'b'], [1, 2, 1, 2]],
+                  columns=['data1', 'data2'])
+print('df:\n', df)
+
+data = {('California', 2000): 33871648,
+        ('California', 2010): 37253956,
+        ('Texas', 2000): 20851820,
+        ('Texas', 2010): 25145561,
+        ('New York', 2000): 18976457,
+        ('New York', 2010): 19378102}
+
+print('pd.Series(data):\n', pd.Series(data))
+输出：
+df:
+         data1     data2
+a 1  0.751396  0.229805
+  2  0.224526  0.116114
+b 1  0.925029  0.230258
+  2  0.832608  0.191625
+pd.Series(data):
+ California  2000    33871648
+            2010    37253956
+Texas       2000    20851820
+            2010    25145561
+New York    2000    18976457
+            2010    19378102
+dtype: int64
 ```
-6.合并数据集
+5.3 层次索引和列之间数据的重新排列
 ```python
+输入：
+import numpy as np
+import pandas as pd
+
+index = pd.MultiIndex.from_product([['a', 'c', 'b'], [1, 2]])
+data = pd.Series(np.random.rand(6), index=index)
+data.index.names = ['char', 'int']
+print('data:\n', data)
+
+try:
+    data['a':'b']
+except KeyError as e:
+    print(type(e))
+    print(e)
+
+data = data.sort_index()
+
+print('data:\n', data)
+print(data['a':'b'])
+输出：
+data:
+ char  int
+a     1      0.959623
+      2      0.890802
+c     1      0.690089
+      2      0.061819
+b     1      0.717915
+      2      0.050789
+dtype: float64
+<class 'pandas.errors.UnsortedIndexError'>
+'Key length (1) was greater than MultiIndex lexsort depth (0)'
+data:
+ char  int
+a     1      0.959623
+      2      0.890802
+b     1      0.717915
+      2      0.050789
+c     1      0.690089
+      2      0.061819
+dtype: float64
+char  int
+a     1      0.959623
+      2      0.890802
+b     1      0.717915
+      2      0.050789
+dtype: float64
 ```
+6.1 定义函数拼接数据表
 ```python
+输入：
+import pandas as pd
+
+def make_df(cols, ind):  # 定义拼接函数
+    data = {c: [str(c) + str(i) for i in ind]  # 快速生成数据表
+            for c in cols}
+    return pd.DataFrame(data, ind)
+
+# example DataFrame
+a = make_df('ABC', range(3))
+print(a)
+输出   ： 
+A   B   C
+0  A0  B0  C0
+1  A1  B1  C1
+2  A2  B2  C2
+```
+6.2 Numpy数组的连接
+```python
+输入：
+import numpy as np
+
+x = [1, 2, 3]
+y = [4, 5, 6]
+z = [7, 8, 9]
+# 调用np中的连接函数，若参数axis=1,按列拼接；为0，按行拼接
+x_y_z = np.concatenate([x, y, z])  
+
+print('x_y_z:\n', x_y_z)
+输出：
+x_y_z:
+ [1 2 3 4 5 6 7 8 9]
+```
+6.3 应用pd中的函数进行拼接，pd.concat
+```python
+输入：
+import pandas as pd
+
+ser1 = pd.Series(['A', 'B', 'C'], index=[1, 2, 3])
+ser2 = pd.Series(['D', 'E', 'F'], index=[4, 5, 6])
+ser1_ser2 = pd.concat([ser1, ser2])
+
+print('ser1_ser2:\n', ser1_ser2)
+输出：
+ser1_ser2:
+ 1    A
+2    B
+3    C
+4    D
+5    E
+6    F
+dtype: object
+```
+6.4 append()的用法
+```python
+输入：
+import pandas as pd
+
+def make_df(cols, ind):  # 调用函数，实现数据集
+    data = {c: [str(c) + str(i) for i in ind]
+            for c in cols}
+    return pd.DataFrame(data, ind)
+
+df1 = make_df('AB', [1, 2])
+df2 = make_df('AB', [3, 4])
+
+print('df1:\n', df1)
+print('df2:\n', df2)
+# 默认按行连接
+print('df1.append(df2):\n', df1.append(df2))
+输出：
+df1:
+     A   B
+1  A1  B1
+2  A2  B2
+df2:
+     A   B
+3  A3  B3
+4  A4  B4
+df1.append(df2):
+     A   B
+1  A1  B1
+2  A2  B2
+3  A3  B3
+4  A4  B4
 ```
 
-```python
-``````python
-``````python
-``````python
-```
+
 
 
