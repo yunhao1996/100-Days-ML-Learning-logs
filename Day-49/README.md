@@ -1,9 +1,83 @@
 # 深入研究---pandas
+```python
+1.合并与连接
+1.1 合并数据集--merge
+import pandas as pd
 
+df1 = pd.DataFrame({'employee': ['Bob', 'Jake', 'Lisa', 'Sue'],
+                    'group': ['Accounting', 'Engineering', 'Engineering', 'HR']})
+df2 = pd.DataFrame({'employee': ['Lisa', 'Bob', 'Jake', 'Sue'],
+                    'hire_date': [2004, 2008, 2012, 2014]})
 
+print('df1:\n', df1)
+print('df2:\n', df2)
+# 合并数据集，相同的标签合并在一起，字母按照顺序排
+df3 = pd.merge(df1, df2)
+print('df3:\n', df3)
+输出：
+df1:
+   employee        group
+0      Bob   Accounting
+1     Jake  Engineering
+2     Lisa  Engineering
+3      Sue           HR
+df2:
+   employee  hire_date
+0     Lisa       2004
+1      Bob       2008
+2     Jake       2012
+3      Sue       2014
+df3:
+   employee        group  hire_date
+0      Bob   Accounting       2008
+1     Jake  Engineering       2012
+2     Lisa  Engineering       2004
+3      Sue           HR       2014
+1.2 多对1合并
+import pandas as pd
+
+df1 = pd.DataFrame({'employee': ['Bob', 'Jake', 'Lisa', 'Sue'],
+                    'group': ['Accounting', 'Engineering', 'Engineering', 'HR']})
+df2 = pd.DataFrame({'employee': ['Lisa', 'Bob', 'Jake', 'Sue'],
+                    'hire_date': [2004, 2008, 2012, 2014]})
+df4 = pd.DataFrame({'group': ['Accounting', 'Engineering', 'HR'],
+                    'supervisor': ['Carly', 'Guido', 'Steve']})
+df3 = pd.merge(df1, df2)
+df1_df5 = pd.merge(df3, df4)  # 保留重复数目
+
+print(df1_df5)
+输出:
+  employee        group  hire_date supervisor
+0      Bob   Accounting       2008      Carly
+1     Jake  Engineering       2012      Guido
+2     Lisa  Engineering       2004      Guido
+3      Sue           HR       2014      Steve
+
+1.3 多对多合并
+import pandas as pd
+
+df5 = pd.DataFrame({'group': ['Accounting', 'Accounting',
+                              'Engineering', 'Engineering', 'HR', 'HR'],
+                    'skills': ['math', 'spreadsheets', 'coding', 'linux',
+                               'spreadsheets', 'organization']})
+df1 = pd.DataFrame({'employee': ['Bob', 'Jake', 'Lisa', 'Sue'],
+                    'group': ['Accounting', 'Engineering', 'Engineering', 'HR']})
+df1_df5 = pd.merge(df1, df5)  # 合并无关列会自动扩展
+print(df1_df5)
+输出：
+  employee        group        skills
+0      Bob   Accounting          math
+1      Bob   Accounting  spreadsheets
+2     Jake  Engineering        coding
+3     Jake  Engineering         linux
+4     Lisa  Engineering        coding
+5     Lisa  Engineering         linux
+6      Sue           HR  spreadsheets
+7      Sue           HR  organization
+
+1.4 此外，merge还可以指定关键字进行一些合并的操作
 
 2.累计与分组
-```python
 2.1 应用Series
 import seaborn as sns
 import numpy as np
@@ -181,7 +255,48 @@ None
 
 3.数据透视表
 3.1 激励数据透视表
+import pandas as pd
+import seaborn as sns
 
+titanic = sns.load_dataset('titanic')
+a = titanic.groupby('sex')[['survived']].mean()  # 按性别划分的存活率
+print('a:\n', a)
+b = titanic.groupby(['sex', 'class'])['survived'].aggregate('mean').unstack()  # 加入阶级的影响
+print('b:\n', b)
+age = pd.cut(titanic['age'], [0, 18, 80])  # 继续加入年龄的因素
+c = titanic.pivot_table('survived', ['sex', age], 'class')
+print('c:\n', c)
+fare = pd.qcut(titanic['fare'], 2)  # 自动计算分数位
+d = titanic.pivot_table('survived', ['sex', age], [fare, 'class'])  # 加入票价信息
+print('d:\n', d)
+输出：
+a:
+         survived
+sex             
+female  0.742038
+male    0.188908
+b:
+ class      First    Second     Third
+sex                                 
+female  0.968085  0.921053  0.500000
+male    0.368852  0.157407  0.135447
+c:
+ class               First    Second     Third
+sex    age                                   
+female (0, 18]   0.909091  1.000000  0.511628
+       (18, 80]  0.972973  0.900000  0.423729
+male   (0, 18]   0.800000  0.600000  0.215686
+       (18, 80]  0.375000  0.071429  0.133663
+d:
+ fare            (-0.001, 14.454]            ... (14.454, 512.329]          
+class                      First    Second  ...            Second     Third
+sex    age                                  ...                            
+female (0, 18]               NaN  1.000000  ...          1.000000  0.318182
+       (18, 80]              NaN  0.880000  ...          0.914286  0.391304
+male   (0, 18]               NaN  0.000000  ...          0.818182  0.178571
+       (18, 80]              0.0  0.098039  ...          0.030303  0.192308
+
+[4 rows x 6 columns]
 ```
 
 
