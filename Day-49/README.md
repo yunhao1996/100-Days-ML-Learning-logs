@@ -31,6 +31,7 @@ ser.sum:
  2.811925491708157
 ser.mean:
  0.5623850983416314
+ 
 2.2 对于DataFrame,聚合返回每个列中的结果
 import numpy as np
 import pandas as pd
@@ -60,6 +61,7 @@ dtype: float64
 3    0.599887
 4    0.432046
 dtype: float64
+
 2.3 采用describe聚合
 import seaborn as sns
 
@@ -76,6 +78,7 @@ min      1.00000        1.328300    0.003600    1.350000  1989.000000
 50%      1.00000      357.000000    1.245000   39.940000  2009.000000
 75%      2.00000      999.600000    2.867500   59.332500  2011.000000
 max      6.00000    17337.500000   25.000000  354.000000  2014.000000
+
 2.4 Split, apply, combine
 import pandas as pd
 
@@ -90,6 +93,7 @@ key
 A       3
 B       5
 C       7
+
 2.5 聚合、筛选、转换、应用-aggregation
 
 import pandas as pd
@@ -121,11 +125,13 @@ key
 A       0    1.5   3     3    4.0   5
 B       1    2.5   4     0    3.5   7
 C       2    3.5   5     3    6.0   9
+
 2.6 过滤操作--基于属性删除数据
 接上输入:
 def filter_func(x):
     return x['data2'].std() > 4
 print(df', "df.groupby('key').std()", "df.groupby('key').filter(filter_func)")
+
 2.7 转化功能-transform
 import numpy as np
 import pandas as pd
@@ -146,6 +152,7 @@ print(a)
 3    1.5   -1.0
 4    1.5    3.5
 5    1.5    3.0
+
 2.8 提供分组键的列表
 import numpy as np
 import pandas as pd
@@ -171,6 +178,7 @@ print(a)
 1      4      3
 2      4      7
 None
+
 3.数据透视表
 3.1 激励数据透视表
 
