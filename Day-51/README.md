@@ -19,6 +19,7 @@ plt.show()  # 显示
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/1.png">
 </p>
+
 ```python
 1.2 matlab风格界面
 import matplotlib.pyplot as plt
@@ -56,6 +57,7 @@ ax.plot(x, np.sin(x))
 
 plt.show()
 ```
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/3.png">
 </p>
