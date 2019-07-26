@@ -93,9 +93,11 @@ plt.legend(numpoints=1)
 plt.xlim(0, 1.8)
 plt.show()
 ```
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/5.png">
 </p>
+
  ```python
 3.2 scatter的用法
 import matplotlib.pyplot as plt
