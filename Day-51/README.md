@@ -15,10 +15,11 @@ plt.style.use('classic')  # 经典风格
 fig.savefig('my_figure.png')  # 保存图片到当前目录
 
 plt.show()  # 显示
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/1.png">
 </p>
-
+```python
 1.2 matlab风格界面
 import matplotlib.pyplot as plt
 import numpy as np
@@ -34,11 +35,11 @@ plt.plot(x, np.sin(x))
 plt.subplot(2, 1, 2)
 plt.plot(x, np.cos(x))
 plt.show()
-
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/2.png">
 </p>
-```
+
 ## 2. 简易线性图
 ```python
 2.1 线性图
@@ -54,11 +55,11 @@ ax.plot(x, np.sin(x))
 # plt.plot(x, np.sin(x))
 
 plt.show()
-
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/3.png">
 </p>
-```
+
 ## 3.简易散点图
 ```python
  3.1 plot画散点图
@@ -72,11 +73,11 @@ y = np.sin(x)
 plt.style.use('seaborn-whitegrid')  # 设置画图风格
 plt.plot(x, y, 'o', color='black')
 plt.show()
-
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/4.png">
 </p>
- 
+ ```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -87,10 +88,11 @@ for marker in ['o', '.', ',', 'x', '+', 'v', '^', '<', '>', 's', 'd']:  # 每种
 plt.legend(numpoints=1)
 plt.xlim(0, 1.8)
 plt.show()
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/5.png">
 </p>
- 
+ ```python
 3.2 scatter的用法
 import matplotlib.pyplot as plt
 import numpy as np
@@ -101,11 +103,11 @@ y = np.sin(x)
 
 plt.scatter(x, y, marker='o')  # 散点函数
 plt.show()
-
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/6.png">
 </p>
-
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -121,12 +123,12 @@ plt.scatter(x, y, c=colors, s=sizes, alpha=0.3,
 
 plt.colorbar()  # 显示颜色变化模型柱状图
 plt.show()
-
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/7.png">
 </p>
-```
-4 可视化异常处理
+
+## 4 可视化异常处理
 ```python
 4.1 plt.errorbar()函数用于表现有一定置信区间的带误差数据。
 plt.errorbar(x,   
@@ -150,20 +152,20 @@ y = np.sin(x) + dy * np.random.randn(50)
 plt.style.use('seaborn-whitegrid')
 plt.errorbar(x, y, yerr=dy, fmt='.k')
 plt.show()
-
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/8.png">
 </p>
-
+```python
 当数据拥挤时，淡化误差，突出数据点，修改如下：
 plt.errorbar(x, y, yerr=dy, fmt='o', color='black',
              ecolor='lightgray', elinewidth=3, capsize=0)
-             
+```    
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/9.png">
 </p>
 
-```
+
 ## 5.密度线和等高线
 ```python
 5.1 可视化一个三维函数
@@ -187,9 +189,9 @@ plt.imshow(Z, extent=[0, 5, 0, 5], origin='lower',
            cmap='RdGy', alpha=0.5)
 plt.colorbar()
 plt.show()
-
+```
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/10.png">
 </p>
 
-```
+
