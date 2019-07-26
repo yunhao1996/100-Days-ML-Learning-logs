@@ -76,10 +76,12 @@ plt.style.use('seaborn-whitegrid')  # 设置画图风格
 plt.plot(x, y, 'o', color='black')
 plt.show()
 ```
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/4.png">
 </p>
- ```python
+
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -109,6 +111,7 @@ plt.show()
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/6.png">
 </p>
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -126,6 +129,7 @@ plt.scatter(x, y, c=colors, s=sizes, alpha=0.3,
 plt.colorbar()  # 显示颜色变化模型柱状图
 plt.show()
 ```
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/7.png">
 </p>
@@ -155,14 +159,17 @@ plt.style.use('seaborn-whitegrid')
 plt.errorbar(x, y, yerr=dy, fmt='.k')
 plt.show()
 ```
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/8.png">
 </p>
+
 ```python
 当数据拥挤时，淡化误差，突出数据点，修改如下：
 plt.errorbar(x, y, yerr=dy, fmt='o', color='black',
              ecolor='lightgray', elinewidth=3, capsize=0)
-```    
+```   
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/9.png">
 </p>
@@ -192,6 +199,7 @@ plt.imshow(Z, extent=[0, 5, 0, 5], origin='lower',
 plt.colorbar()
 plt.show()
 ```
+
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-51/pictures/10.png">
 </p>
