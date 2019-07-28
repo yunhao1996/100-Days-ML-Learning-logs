@@ -1,4 +1,3 @@
-
 # 深入研究--MATPLOTLIB
 
 ## 1.直方图  
@@ -131,6 +130,189 @@ plt.show()
   <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
 </p>
 
-## 4.多子图
+## 4.多子图--图中图
+
+```python
+简单的设置axes
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-white')
+
+ax1 = plt.axes()  # 标准图
+# 设置x和y轴位置0.65（宽度和高度的比例），设置轴的0.2比例
+ax2 = plt.axes([0.65, 0.65, 0.2, 0.2])
+plt.show()
+```
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+</p>
+
+
+```python
+区域垂直放置，函数： add_axes()
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-white')
+import numpy as np
+
+fig = plt.figure()
+# 新增子区域，[left, bottom, width, height],前两个量是相对的，后两个是绝对的xticklabel: x轴的刻度标记
+ax1 = fig.add_axes([0.1, 0.5, 0.8, 0.4],
+                   xticklabels=[], ylim=(-1.2, 1.2))
+ax2 = fig.add_axes([0.1, 0.1, 0.8, 0.4],
+                   ylim=(-1.2, 1.2))
+
+x = np.linspace(0, 10, 50)  #
+ax1.plot(np.sin(x))
+ax2.plot(np.cos(x))
+plt.show()
+```
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+</p>
+
+```python
+对齐的列或者子图--plt.subplot
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-white')
+
+for i in range(1, 7):
+    plt.subplot(2, 3, i)
+    plt.text(0.5, 0.5, str((2, 3, i)),  # 设置x,y 的坐标和显示字符内容
+             fontsize=18, ha='center')  # 设置字体大小和文本放置位置
+    
+plt.show()
+```
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+</p>
+
+```python
+更复杂的排列方式plt.GridSpec
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-white')
+
+# 非对称子图，设置为2行3列，子图之间宽度间隔为0.4，高度间隔为0.3
+grid = plt.GridSpec(2, 3, wspace=0.4, hspace=0.3)
+
+plt.subplot(grid[0, 0])
+plt.subplot(grid[0, 1:])
+plt.subplot(grid[1, :2])  # 第一列和第二列合在一起
+plt.subplot(grid[1, 2])
+
+plt.show()
+```
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+</p>
+
+```python
+更复杂的例子
+import numpy as np
+import matplotlib.pyplot as plt
+
+mean = [0, 0]
+cov = [[1, 1], [1, 2]]
+x, y = np.random.multivariate_normal(mean, cov, 3000).T
+
+# 设置子图
+fig = plt.figure(figsize=(6, 6))
+grid = plt.GridSpec(4, 4, hspace=0.2, wspace=0.2)  # 4行4列，高度和宽度间隔为0.2比例
+main_ax = fig.add_subplot(grid[:-1, 1:])  # 不包含最后一行
+y_hist = fig.add_subplot(grid[:-1, 0], xticklabels=[], sharey=main_ax)  # x轴刻度标签没有
+x_hist = fig.add_subplot(grid[-1, 1:], yticklabels=[], sharex=main_ax)
+
+# scatter points on the main axes
+main_ax.plot(x, y, 'ok', markersize=3, alpha=0.2)  # 内容
+
+# histogram on the attached axes
+x_hist.hist(x, 40, histtype='stepfilled',
+            orientation='vertical', color='gray')
+x_hist.invert_yaxis()
+
+y_hist.hist(y, 40, histtype='stepfilled',
+            orientation='horizontal', color='gray')
+y_hist.invert_xaxis()
+plt.show()
+```
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+</p>
+
+## 5.文字和注释
+
+```python
+plt.annotate(s="New Year's Day", xy=('2012-1-1', 4100),  xycoords='data',
+            xytext=(50, -30), textcoords='offset points',
+            arrowprops=dict(arrowstyle="->",
+                            connectionstyle="arc3,rad=-0.2"))
+参数：
+s 为注释文本内容
+xy 为被注释的坐标点
+xytext 为注释文字的坐标位置
+xycoords 参数如下:
+
+figure points：图左下角的点
+figure pixels：图左下角的像素
+figure fraction：图的左下部分
+axes points：坐标轴左下角的点
+axes pixels：坐标轴左下角的像素
+axes fraction：左下轴的分数
+data：使用被注释对象的坐标系统(默认)
+polar(theta,r)：if not native ‘data’ coordinates t
+
+weight 设置字体线型
+{‘ultralight’, ‘light’, ‘normal’, ‘regular’, ‘book’, ‘medium’, ‘roman’, ‘semibold’, ‘demibold’, ‘demi’, ‘bold’, ‘heavy’, ‘extra bold’, ‘black’}
+
+color 设置字体颜色：
+{‘b’, ‘g’, ‘r’, ‘c’, ‘m’, ‘y’, ‘k’, ‘w’}
+‘black’,'red’等
+
+[0,1]之间的浮点型数据：
+RGB或者RGBA, 如: (0.1, 0.2, 0.5)、(0.1, 0.2, 0.5, 0.3)等
+
+arrowprops  #箭头参数,参数类型为字典dict：
+width：箭头的宽度(以点为单位)
+headwidth：箭头底部以点为单位的宽度
+headlength：箭头的长度(以点为单位)
+shrink：总长度的一部分，从两端“收缩”
+facecolor：箭头颜色
+
+bbox给标题增加外框 ，常用参数如下：
+boxstyle：方框外形
+facecolor：(简写fc)背景颜色
+edgecolor：(简写ec)边框线条颜色
+edgewidth：边框线条大小
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
