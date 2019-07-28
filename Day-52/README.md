@@ -21,7 +21,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/1.png">
 </p>
   
 ```python
@@ -42,7 +42,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/2.png">
 </p>
 
 ## 2.配置图例
@@ -68,7 +68,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/3.png">
 </p>
 
 ## 3.配置颜色条--colorbar
@@ -86,7 +86,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/4.png">
 </p>
 
 ```python
@@ -127,7 +127,7 @@ plt.show()
 显示‘jet’映射：
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/5.png">
 </p>
 
 ## 4.多子图--图中图
@@ -144,7 +144,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/6.png">
 </p>
 
 
@@ -168,7 +168,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/7.png">
 </p>
 
 ```python
@@ -185,7 +185,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/8.png">
 </p>
 
 ```python
@@ -205,7 +205,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/9.png">
 </p>
 
 ```python
@@ -239,7 +239,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-52/pictures/10.png">
 </p>
 
 ## 5.文字和注释
