@@ -12,7 +12,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-53/pictures/1.png">
 </p>
 
 ## 三维点和线的可视化
@@ -39,7 +39,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-53/pictures/2.png">
 </p>
 
 ## 三维等高线图
@@ -69,7 +69,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-53/pictures/3.png">
 </p>
 
 ## 线框图和曲面图
@@ -99,7 +99,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-53/pictures/4.png">
 </p>
 
 ```python
@@ -128,7 +128,7 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-53/pictures/5.png">
 </p>
 
 ```python
@@ -162,9 +162,9 @@ plt.show()
 ```
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-53/pictures/6.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day3/blob/master/微信图片_20190417210717.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-53/pictures/7.png">
 </p>
