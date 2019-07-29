@@ -20,8 +20,9 @@
 ## 3.树状图
 
 <p align="center">
-  <img src= "">
+  <img src= "https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-54/1.png">
 </p>
+
 ```python
 
 
