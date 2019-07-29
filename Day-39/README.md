@@ -48,9 +48,23 @@ print(np.argmax(predictions[0]))
 plt.imshow(x_test[0],cmap=plt.cm.binary)
 plt.show()
 ```
+### 归一化输出测试集一张图片:
 
 <p align="center">
-  <img src="">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-39/1.png">
 </p>
+
+### 预测验证集第一张图上的数字是否是7
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-39/2.png">
+</p>
+
+### 测试集迭代结果：
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-39/3.png">
+</p>
+
 
 
