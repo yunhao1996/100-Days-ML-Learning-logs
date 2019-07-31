@@ -37,6 +37,7 @@ model.add(Dense(1))
 model.add(Activation('sigmoid'))
 
 print(model.summary())  # 查看各层的属性
+
 # 定义损失函数,优化器
 model.compile(loss='binary_crossentropy',
               optimizer='adam',  # 优化方式
@@ -44,7 +45,5 @@ model.compile(loss='binary_crossentropy',
 
 # validation_split指定比例划分验证集，不参与训练，每次epock后，测试模型的指标
 model.fit(X, y, batch_size=32, epochs=3, validation_split=0.3)
-
-print(model)
 
 ```
