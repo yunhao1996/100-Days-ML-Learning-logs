@@ -47,3 +47,7 @@ model.compile(loss='binary_crossentropy',
 model.fit(X, y, batch_size=32, epochs=3, validation_split=0.3)
 
 ```
+
+<p align="center">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-41/1.png">
+</p>
