@@ -50,7 +50,7 @@ model.fit(X, y, batch_size=32, epochs=3, validation_split=0.3)
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-41/1.png">
 </p>
 
-## 迭代运行结果，批大小为32，epock为3
+## 迭代运行结果，批大小为32，epock为3,文章建议增加epock
 
 <p align="center">
   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-41/2.png">
