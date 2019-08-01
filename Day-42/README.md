@@ -1,16 +1,16 @@
-# 程序运行不出来，改不出来
+# 给的程序版本可能存在版本的问题，复制下来，最后一步callback功能无法运行，通过对最近的网页搜索，我发现调用tensorboard时，直接从Keras中调用即可，
+# 所以我直接把框架模型换成了Keras,
 
-## 关于tensorboard
+## 关于tensorboard 可用于程序运行过程中的损失，准确率等一些属性的可视化表达 
 ```python
 
-from tensorflow.keras.callbacks import TensorBoard
 import tensorflow as tf
-from tensorflow.keras.datasets import cifar10
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
-from tensorflow.keras.layers import Conv2D, MaxPooling2D
-from tensorflow.keras.callbacks import TensorBoard
+from keras.datasets import cifar10
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+from keras.layers import Conv2D, MaxPooling2D
+from keras.callbacks import TensorBoard
 import pickle
 import time
 
@@ -51,7 +51,9 @@ model.compile(loss='binary_crossentropy',
 model.fit(X, y,
           batch_size=32,
           epochs=3,
-          validation_split=0.3)
+          validation_split=0.3,
           callbacks=[tensorboard])
 
 ```
+
+## 目前还不能解决的是如何打开初始化结果
