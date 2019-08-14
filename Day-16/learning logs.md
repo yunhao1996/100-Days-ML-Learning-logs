@@ -49,23 +49,23 @@ plt. show()  # 显示图片
 ```
 数据显示：
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day16/blob/master/picture/Figure_1.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-16/pictures/Figure_1.png">
 </p> 
 分类显示：
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day16/blob/master/picture/2.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-16/pictures/2.png">
 </p> 
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day16/blob/master/picture/3.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-16/pictures/3.png">
 </p> 
 `C`会限制每个点的重要性，很小时，决策边界接近线性模型；很大时会使决策边界弯曲将正确点分类，模型更复杂
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day16/blob/master/picture/4.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-16/pictures/4.png">
 </p> 
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day16/blob/master/picture/5.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-16/pictures/5.png">
 </p> 
 `gamma`控制高斯核的宽度他决定了点与点之间“靠近”是指多大的距离，数值很小，半径较大；数值大，半径小，模型更复杂  
 `C``gamma`要同时调节
