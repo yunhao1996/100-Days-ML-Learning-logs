@@ -50,7 +50,7 @@ plt.show()
 输出图片：
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day4-5-6/blob/master/Figure_1.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-4、5、6、8/pictures/Figure_1.png">
 </p> 
 
 左边图片为原始数据，右边图片为特征缩放数据，对比，可以看出，特征缩放只是把横纵坐标搞的更小了，但是，散点的分布形式完全相同。
@@ -73,25 +73,25 @@ X_test = sc.fit_transform(X_test)
 概念理解------通俗说，就是找到一种规律，将事物进行分类，名为回归，实际就是分类。主要用于二分类问题（其结果只有两种可能），比如：`是与否`，通过逻辑函数将`是与否`转化为二进制数，即`是`为`1`,`否`为`0`。  
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day4-5-6/blob/master/biji3.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-4、5、6、8/pictures/biji3.png">
 </p>
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day4-5-6/blob/master/biji4.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-4、5、6、8/pictures/biji4.png">
 </p>
 
  <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day4-5-6-8/blob/master/picture/_20190426202602.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-4、5、6、8/pictures/_20190426202602.png">
 </p>
 
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day4-5-6-8/blob/master/picture/1556281452(1).png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-4、5、6、8/pictures/1556281452(1).png">
 </p>
 
 * 关于混淆矩阵（confusion matrix）
 
 对于二分类问题的评估结果，一种最全面的表示方法是使用混淆矩阵，介绍如下：  
 <p align="center">
-  <img src="https://github.com/yunhao1996/100_ML_Day4-5-6/blob/master/123_20190421203235.png">
+  <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-4、5、6、8/pictures/123_20190421203235.png">
 </p>
 错误的分类反映在效果图上为红色区域的绿点，绿色区域的红点。  
 
