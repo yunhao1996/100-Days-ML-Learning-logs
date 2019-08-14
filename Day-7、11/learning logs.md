@@ -60,7 +60,7 @@ print(c)
  * 理解：
  
  <p align="center">
-   <img src="https://github.com/yunhao1996/100_ML_Day7-11/blob/master/knn.png">
+   <img src="https://github.com/yunhao1996/100-Days-ML-Learning-logs/blob/master/Day-7、11/knn.png">
  </p>
    如果选取3个最近的邻居（K=3），红色三角形占两个，蓝色正方形占一个，所以将绿色圆圈视为红色三角形类。 如果选取5个最近的邻居（K=3），红色三角形占两个，蓝色正方形占三个，所以将绿色圆圈视为蓝色正方形类。
     所以，k值的选择很重要K值设置过小会降低分类精度；若设置过大，且测试样本属于训练集中包含数据较少的类，则会增加噪声，降低分类效果。
